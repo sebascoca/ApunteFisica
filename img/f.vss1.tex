@@ -1,0 +1,37 @@
+\begin{plot}{.9}{f.vss1}
+  {Representación gráfica de un auto que se mueve con varias velocidades
+  constante.
+  }
+  unset border
+  unset key
+  #set grid front   #| son para mandar los números de los
+  #unset grid	    #| ejes adelante (*)
+  #unset tics
+  #set style fill transparent solid 0. noborder
+  set tics front    #| equivalente a (*) pero en una línea
+  set xtics axis mirror offset 1
+  set ytics axis ("$60$" 0.5,"$-30$" -0.25) mirror offset 0,0.5
+  #  set ytics axis () offset 0,1
+  set arrow 1 from graph 0, first 0 to graph 1, first 0 head front lw 3 # eje x
+  set arrow 2 from 0, graph 0 to 0, graph 1 head front lw 3		# eje y 
+  show arrow 1 #; set label "$t$(h)" at graph .95,.4
+  set xlabel "$t$(h)" offset  graph .46,.4
+  show arrow 2#; set label "$v$(km/h)" at graph 0.25,.98 
+  set ylabel "$v$(km/h)" offset graph .4,.5 rotate by 0
+  set arrow from 3,-.25 to 3,.5 nohead front lc 0 lt 0 lw 4
+  set arrow from 5,0 to 5,-.25 nohead front lc 0 lt 0 lw 4
+  set arrow from 0,-.25 to 3,-.25 nohead front lc 0 lt 0 lw 4
+  set label '$\Delta x_1$' at 1.5,0.3 front
+  set label '$\Delta x_2$' at 3.5,-0.18 front
+  f(x) = .5
+  set yzeroaxis lt -4 lc -4
+  set xrange [-1.2:5.7]; set yrange [-.5:1]
+  #
+  set object 1 rect from 0,0 to 3,.5 fc rgb 'purple' fs solid .15 noborder\
+  behind
+  set object 2 rect from 3,-.25 to 5,0 fc rgb 'red' fs solid .10 noborder behind
+  plot 0 \
+  , [0:3] f(x) lc 2 lw 4 \
+  , [3:5] -.25 lc 2 lw 4 \
+\end{plot}
+

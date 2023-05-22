@@ -1,0 +1,43 @@
+  \centering
+  \setlength{\unitlength}{1mm}
+  \begin{picture}(80,40)
+    % --- plano ---
+    \put(0,0){\line(3,1){80}}
+    \put(0,0){\line(1,0){80}}
+    \qbezier(18,0)(20,3)(18,6)
+    \put(13,2){$\alpha$}
+    % --- cuerpo ---
+    \put(30,20){\line(3,1){15}}
+    \put(32.9,11.0){\line(-1,3){3}}
+    \put(48.0,16.0){\line(-1,3){3}}
+    % --- fuerza que tira ---
+    \linethickness{0.007mm}
+    \put(46.3,21){\circle*{1}}
+    \put(46.3,21){\line(3,1){30}}
+    \linethickness{2mm}
+    \thicklines % todos los vectores en negrita
+    \put(46.3,21){\vector(3,1){5}}
+    \put(55,27){$\vec{F}$}
+    % --- fuerzas de interacción ---
+    \put(39.5,18){\circle*{1}}
+    \put(39.5,18){\vector(0,-1){15}}
+    \put(42,7){$\vec{P}$}
+    \put(41.1,14){\circle*{1}}
+    \put(41.1,14){\vector(-1,3){4}}
+    \put(37,27){$\vec{N}$}
+    \put(38,12.7){\circle*{1}}
+    \put(38,12.7){\vector(-3,-1){7.5}}
+    \put(31,06){$\vec{f_r}$}
+    % --- Sistema de referencia ---
+    \put(-10,10){\vector(3,1){35}}
+    \put(25,23){$x$}
+    \put(0,5){\vector(-1,3){12}}
+    \put(-10,40){$y$}
+    \put(-2.3,12.3){\circle*{1}}
+    \put(-1,10){o}
+  \end{picture}
+  \caption{Diagrama de cuerpo aislado y sistema de referencia a utilizar. Se
+  especifican las fuerzas que actúan sobre el cuerpo en estudio. Con un círculo
+  se ubica al punto de aplicación de cada fuerza.}
+  \label{f.dcasr}
+

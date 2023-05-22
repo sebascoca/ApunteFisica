@@ -1,0 +1,270 @@
+\appendix
+\chapter{Gráficos}
+
+\section{Construcción de gráficos}
+\label{c.graf}
+
+La correcta construcción de un gráfico tiene varios puntos: 
+\begin{itemize}
+  \item ejes de coordenadas con nombre, unidad y flecha que indica dirección
+    de valores crecientes;
+  \item no se pueden presentar gráficos con líneas verticales continuas;
+  \item líneas horizontales continuas solo para funciones; 
+  \item no se pueden presentar gráficos en donde no se cumpla la biyección, es
+    posible relajar la condición y solicitar que sea inyectiva;
+  \item las funciones deben ser continuas y sin saltos, es decir que uno las
+    puede graficar sin levantar el lápiz.\footnote{Esta característica depende
+    de la situación que será aclarada si no es necesario que se cumpla la
+    condición, en particular para la velocidad.}
+\end{itemize}
+La Figura (\ref{f.mal}) muestra todos estos problemas. Todo lo indicado en
+{\color{red}rojo} corresponden a errores en la representación gráfica,
+enumerados a continuación:
+\begin{itemize}
+  \item Eje vertical sin flecha que indique dirección de valores crecientes, sin
+    nombre y sin unidad.
+  \item Eje horizontal con dos flechas, no queda definida la dirección de
+    valores crecientes.
+  \item Nombre de eje horizontal sin unidad.
+  \item Puntos $a$, $c$, $f$ y $g$ indicados con línea vertical continua. Los
+    correctos son los puntos $b$, $d$ y $e$ con línea vertical de trazos.
+  \item Puntos $f$ y $g$ indicados con línea continua horizontal y no
+    corresponden a una función. La indicación correcta se observa en los puntos
+    $a$, $d$ y $e$ con líneas horizontales de trazos.
+  \item La función violeta que contiene a los puntos $e$ y $g$ está mal ubicada
+    ya que la función deja de ser biyectiva como lo muestran los puntos $d-e$ y
+    $f-g$.
+  \item La función azul que comienza en el punto $h$ y sería continuación del
+    punto $i$ no cumple que se pueda realizar sin levantar la mano. En este
+    punto presenta una discontinuidad.
+\end{itemize}
+
+\input{img/f.mal}
+
+A continuación lo que está correcto en el gráfico:
+\begin{itemize}
+  \item Toda la función de color verde es correcta.
+  \item La indicación de los puntos $b$, $d$ y $e$.
+\end{itemize}
+
+Desde el punto de vista de la física, que a un punto del dominio le corresponda
+más de un punto en la imagen (por ej. los puntos $d$ y $e$, $h$ e $i$
+o líneas verticales continuas) significa que la variable independiente,
+generalmente el tiempo, se relaciona con la posibilidad de dos o más
+velocidades/posiciones simultáneas, lo que es físicamente incorrecto. {\bf Un
+cuerpo no puede tener dos o más velocidades/posiciones distintas en el mismo
+instante de tiempo.} Además de esto, un cuerpo no puede pasar de tener una
+velocidad/posición a otra distinta sin pasar por todos los valores de 
+velocidades/posiciones intermedias, esto sería similar a la
+``teletransportación''.\footnote{Para el caso de \mru~ es posible tener gráficos
+de $v-t$ donde se presenten estos ``saltos'' en la función.}
+
+Una posible opción correcta para la Figura (\ref{f.mal}) se presenta a
+continuación. Notar que el último tramo que comienza en el punto $h$ es
+desplazado verticalmente hasta el punto $i$ para que la función pueda ser
+realizada sin ``levantar la mano''.
+
+\input{img/f.bien}
+
+%\subsubsection{Gráficos correctos}
+
+%Próximamente...
+
+%El siguiente gráfico se corresponde con la Figura 3-6 \parencite[65]{alvarenga}
+%presentada sin errores.
+
+%\input{img/f.a36}
+%\begin{plot}{.9}{f.a36}
+  %  {Gráfico sin errores de la Figura 3-6 \parencite[65]{alvarenga}. En color
+  %están indicados los distintos desplazamientos para cada intervalo.}
+  %unset border
+  %unset tics
+  %#unset key
+  %set xtics axis mirror
+  %set ytics axis mirror
+  %#set format xy ""
+  %set xtics axis mirror offset 1
+  %set ytics axis 30,30 mirror 
+  %# ejes
+  %set arrow 1 from graph 0, first 0 to graph 1, first 0 head front lw 3 lc\
+  %0 # eje x
+  %set arrow 2 from 0, graph 0 to 0, graph 1 head front lw 3 lc 0\
+  %# eje y 
+  %show arrow 1 ; set label "$t$(h)" at graph .95,.10
+  %show arrow 2; set label "$v$(km/h)" at graph 0.13,.98 
+  %#
+  %set arrow from 1,0 to 1,90 nohead front lt 0 lw 2
+  %set arrow from 3,0 to 3,90 nohead front lt 0 lw 2
+  %set arrow from 4,0 to 4,60 nohead front lt 0 lw 2
+  %#
+  %set object 1 rect from 0,0 to 1,30 fc rgb 'blue' fs solid .15 noborder
+  %set object 2 rect from 1,0 to 3,90 fc rgb 'green' fs solid .15 noborder
+  %set object 3 rect from 3,0 to 4,60 fc rgb 'purple' fs solid .15 noborder
+  %set label '$\Delta x_1$' at .4,15 front
+  %set label '$\Delta x_2$' at 1.9,50 front
+  %set label '$\Delta x_3$' at 3.4,25 front
+  %#
+  %set xrange [-.5:4.5]; set yrange [-5:95]
+  %plot 0 lc 0 t ''\
+  %, [0:1] 30 lc 0 t ''\
+  %, [1:3] 90 lc 0 t ''\
+  %, [3:4] 60 lc 0 t ''
+%\end{plot}
+
+
+% -----
+
+\section{Intervalos}
+\label{c.interv}
+
+Los intervalos pueden ser \textit{abiertos}, \textit{semi-abiertos o
+semi-cerrados} y \textit{cerrados}, y se presentan con distintas expresiones
+matemáticas. La Figura (\ref{f.interv}) muestra cada caso y su representación
+gráfica.
+\input{img/f.interv}
+
+A modo de ejemplo se considera el intervalo entre los puntos $x=-4$ y $x=2$.
+También se indican los puntos $a$ y $b$ para el último intervalo cerrado (es
+equivalente para cualquier intervalo) para ejemplificar la pertenencia o no de
+los puntos.
+
+Características de cada intervalo:
+\begin{enumerate}
+  \item[\bf Abierto:] los intervalos abiertos se indican con paréntesis en ambos
+    extremos y con una coma la separación entre ambos valores: $(-4,2)$. También
+    se puede utilizar los símbolos mayor/menor ``$< \quad >$'' junto con la
+    variable utilizada: $-4 < x < 2$. Ambas expresiones son equivalentes y
+    significan que el intervalo está comprendido entre $x=-4$ y $x=2$, pero sus
+    puntos extremos no pertenecen al mismo. Esto se expresa del siguiente modo:
+    $-4\notin (-4,2)$ y $2\notin (-4,2)$. El significado que el intervalo sea
+    abierto hace referencia a que uno se puede acercar al valor 2 tanto como
+    quiera pero sin llegar a ese valor.
+  \item[\bf Semi-abierto/cerrado:] los intervalos semi-abiertos/cerrados se
+    indican con paréntesis en un extremo y corchete en el otro: $(-4,2]$. Para
+    nuestro ejemplo es abierto en $x=4$ (no pertenece al intervalo) y cerrado en
+    $x=2$. Al ser un intervalo cerrado en un extremo, significa que éste punto
+    pertenece: $2 \in (-4,2]$. También se utilizan los símbolos mayor/menor y
+    mayor-igual/menor-igual ``$\le \quad \ge$'', cuyo resultado se expresa:
+    \mbox{$-4<x\le2$}. El significado que el intervalo sea cerrado significa que
+    uno se puede acercar tanto a al valor 2 y tomar éste valor.
+  \item[\bf Cerrado:] los intervalos cerrados se indican con corchetes ambos
+    extremos: $[-4,2]$ o con los símbolos: $-4\le x \le 2$. Ambos puntos
+    pertenecen al intervalo.
+\end{enumerate}
+
+Por lo tanto, en base a las características de los intervalos y la pertenencia
+de los puntos, se puede analizar $x=a$:
+$$
+a \in [-4,2],
+$$
+mientras que para $x=b$:
+$$
+b \notin [-4,2].
+$$
+
+%\clearpage
+\section{Función de a tramos, gráficos con GeoGebra}
+\label{c.geogebra}
+
+GeoGebra tiene la opción de realizar gráficos de funciones por tramos. Para
+realizar esto se puede incorporar cada función por separado o introducir la
+función completa. Esto último es lo que se presenta a continuación. Recordar que
+GeoGebra es un software matemático y es el usuario quién debe realizar la
+interpretación física/matemática del problema. Por este motivo se van a trabajar
+con funciones matemáticas que se corresponderían a problemas físicos genéricos.
+
+Se graficará la siguiente función:
+\[
+f(x) = \left\{
+      \begin{array}{ll}
+	x+1, & x \in [-2,1] \\
+	-3x+6, & x \in (1,3] \\
+	(x-5)^2-1, & x \in (3,8] \\
+      \end{array}
+      \right.
+\]
+
+Para realizar la gráfica de la función $f(x)$ se debe utilizar el condicional
+{\bf Si} (o \textbf{if} en inglés) que tiene GeoGebra. La sintaxis del comando que se
+introduce en la \emph{ENTRADA} de GeoGebra es la siguiente:
+
+\begin{lstlisting}[frame=single,language=octave,caption=\small Código a
+utilizar.]
+ENTRADA: Si(condición, acción si es verdad, [acción si es falso])
+
+ENTRADA: if(condición, acción si es verdad, [acción si es falso])
+\end{lstlisting}
+Los dos primeros argumentos son obligatorios, no así el tercero que sería para
+el caso en el que la condición es falsa.
+
+Entonces, para el problema se tienen que incorporar tres condicionales ya que se
+tiene tres intervalos:
+
+\clearpage
+\footnotesize
+\begin{lstlisting}[frame=single,language=octave,caption=\small Código que se
+ingresa en la \emph{ENTRADA} de GeoGebra para graficar $f(x)$.]
+ENTRADA: Si( -2<=x<=1, x+1, Si( 1<x<=3, -3x+6, Si( 3<x<=8, (x-5)^2-1 ) ) )
+
+ENTRADA: if( -2<=x<=1, x+1, if( 1<x<=3, -3x+6, if( 3<x<=8, (x-5)^2-1 ) ) )
+\end{lstlisting}
+\normalsize
+Notar que los intervalos \textbf{no} se escriben con corchetes y paréntesis,
+sino con los signos \mbox{mayor/menor} y mayor/menor igual según sea el
+intervalo. La gráfica de la función se presenta en la Figura (\ref{f.geogebra}).
+
+\input{img/f.geogebra}
+
+Por último, para que aparezca la expresión matemática para $f(x)$ en conjunto
+con la gráfica, se introduce lo siguiente:
+\begin{lstlisting}[frame=single,language=octave,caption=\small En caso que la 
+función se llame $f$ que corresponde al objeto dentro del paréntesis.]
+ENTRADA: FórmulaTexto(f) 
+\end{lstlisting}
+y se observa la siguiente fórmula en el gráfico:
+\[
+f(x) = \left\{
+      \begin{array}{lcl}
+	x+1 &:& -2\le x \le 1 \\
+	-3x+6 &:& 1<x\le3 \\
+	(x-5)^2-1 &:& 3<x\le8 \\
+      \end{array}
+      \right.
+\]
+
+
+
+\clearpage
+
+\chapter{Nomenclatura}
+
+Descripción de los símbolos matemáticos utilizados:
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{cl}
+    \hline\hline
+    Símbolo & Significado \\
+    \hline
+    $\in$ & pertenece \\
+    $\notin$ & no pertenece$^\S$ \\
+    $\exists$ & existencia \\
+    $\forall$ & para todo \\
+    $\angle$ & ángulo \\
+    $(a,b)$ & intervalo abierto desde $a$ hasta $b$ \\
+    $(a,b]$ &  intervalo semiabierto, abierto en $a$ y cerrado en $b$ \\
+    $[a,b]$ & intervalo cerrado desde $a$ hasta $b$  \\
+    $\Rightarrow$ & entonces \\
+    \(\equiv \) & equivalente o definición \\
+    \(\approx \) o \( \simeq \) & aproximado \\
+    \(\therefore\) & por lo tanto \\
+    \( x(t) \) & ecuación o función de movimiento para la posición como función
+    de tiempo \\
+    \( v(t) \) & ecuación o función de movimiento para la velocidad como
+    función de tiempo \\
+    $a$ & magnitud escalar \\
+    $\vec{a}$ & magnitud vectorial \\
+    \hline\hline
+  \end{tabular}
+\end{table}
+$^\S$Cuando el símbolo se encuentre tachado, corresponde a su negación.

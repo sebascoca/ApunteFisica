@@ -1,0 +1,53 @@
+\begin{plot}{0.9}{f.velinst}
+  {Función posición $x(t)$ en el intervalo de interés. Se presentan las
+  distintas velocidades medias calculadas en la Tabla (\ref{t.velinst}) en color
+  verde, violeta y azul, junto con la velocidad instantánea en color rojo. En
+  el recuadro inferior presenta en detalla la función de posición junto con la
+  recta tangente.}
+  #unset border
+  unset key
+  set xtics autofreq .5
+  set mxtics 2
+  set ytics autofreq 30.0
+  set mytics 3
+  set grid
+  set tics front    #| equivalente a (*) pero en una línea
+  set xlabel "$t$(h)" #offset  graph .46,.39
+  set ylabel "$x$(km)" # offset graph .33,.45 rotate by 0
+  #
+  set multiplot
+  #set size 1,1
+  #set origin 0,0
+  set yzeroaxis lt -4 lc -4
+  set xrange [2.25:3.5]; set yrange [40:200]
+  #
+  f(x)=5*x**3 - 2*x**2 + 7*x - 19
+  x0=64.125
+  t0=2.5
+  plot  0 \
+  , [2.3:2.4] 190 w l lc 2 lw 2  \
+  , [2.3:2.4] 175 w l lc 9 lw 2  \
+  , [2.3:2.4] 160 w l lc 6 lw 2  \
+  , [2.3:2.4] 135 w l lc 7 lw 2  \
+  , 131.25*(x-t0)+x0 w l lc 2 \
+  , 109.75*(x-t0)+x0 w l lc 9 \
+  , 95.265625*(x-t0)+x0 w l lc 6\
+  , f(x) w l lc 0 lw 3\
+  , 90.75*(x-t0)+x0 w l lc 7\
+  # subplot
+  set size 0.35,0.35
+  set origin 0.60,0.14
+  set xrange [2.2:2.8]; set yrange [40:89]
+  set label '$\bar{v}=131.25\,$km/h' at .95,193 font ",5"
+  set label '$\bar{v}=109.75\,$km/h' at .95,175 font ",5"
+  set label '$\bar{v}=95.27\,$km/h' at .95,159 font ",5"
+  set label '$v(2.5\text{h})=90.75\text{km/h}$' at .95, 133 font ",5"
+  #
+  unset ylabel
+  unset xlabel
+  plot  0 \
+  , f(x) w l lc 0 lw 3\
+  , 90.75*(x-t0)+x0 w l lc 7
+  unset multiplot
+\end{plot}
+

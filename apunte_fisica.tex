@@ -1,0 +1,130 @@
+%   -------
+%   Pruebas
+%   -------
+% Main document:  cinematica.tex
+% bibliography:	  sec.bib
+% Compilación:	  pdflatex cinematica.tex
+%		  biber cinematica
+%		  pdflatex cinematica.tex
+%		  pdflatex cinematica.tex
+%
+% sino correr:	  make
+% ----------------------------------------------------------------------------
+% &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+% ----------------------------------------------------------------------------
+%\documentclass[12pt,a4paper,spanish]{article}
+
+\input{../../../tex/preambule-red}
+
+\DeclareLanguageMapping{spanish}{spanish-apa}
+%\addbibresource{bibexport.bib}
+\addbibresource{sec.bib}
+
+
+% comandos especiales
+\newcommand{\finej}{\hspace*{\fill}$\blacklozenge$}
+
+\hyphenation{
+	}
+
+%\newcommand\curso{5}
+\setcounter{tocdepth}{3}
+
+\title{Apunte de física}
+\author{Lic. Sebastián Coca}
+\def\autor{Sebastián Coca}
+\def\titulo{Apunte de física}
+%\def\subtitulo{Cinemática y Dinámica}
+\def\subtitulo{Mecánica}
+\def\version{v.\number\year\number\month\number\day}
+\date{\small v.\number\year\number\month\number\day}
+% ----------------------------------------------------------------------------
+% &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+% ----------------------------------------------------------------------------
+\begin{document}
+%\AddToShipoutPicture*{\BackgroundPic}
+%{\transparent{0.4} \ThisCenterWallPaper{0.5}{img/tapa.eps}}
+%\ThisCenterWallPaper{0.5}{img/tapa.eps}
+\begin{titlepage}
+\centering
+  % para generar el título del trabajo
+  \vspace*{.01\textheight}
+  \begin{tcolorbox}[colback=black!5!white,colframe=green!35!black]
+    \centering
+    {\bf\scshape\Huge  \titulo \par}
+    \vspace{1cm}
+    {\scshape \large \subtitulo \par}
+  \end{tcolorbox}
+  \vspace{3cm}
+  %\centering
+  %\includegraphics[width=.7\textwidth]{img/tapa}\par
+  {\itshape\Large \autor \par}
+  \vspace{5cm}
+  {\large \number\year \par}
+  \vfill
+  {\small \version \par}
+  %\tikz[remember picture,overlay] \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{img/tapa.eps}}
+
+  %\bfseries{lalalal}\par
+  %{\scshape jjjaajajaj}
+%  \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black] % src: overleaf
+ %   lala laal
+ %https://creativecommons.org/licenses/by-sa/4.0/
+ % \end{tcolorbox}
+\end{titlepage}
+%\ClearShipoutPicture
+
+%\section*{Prólogo}
+\vspace*{1cm}
+Las siguientes notas corresponden a agregados o correcciones al texto presentado
+en el libro de \citeauthor{alvarenga}, que son necesarias desde mi punto de
+vista para tener una mejor comprensión de la temática.
+
+Tener presente que es una versión preliminar y que se está mejorando
+constantemente, por este motivo se van a encontrar con secciones incompletas y
+comentarios. %Se irá indicando qué sección deben estudiar.
+
+También se van a encontrar con links a distintos vídeos de \citeauthor{coca:ytb}
+(\citeyear{coca:ytb}) donde se desarrollan varios temas.
+
+
+%\maketitle
+
+% Índice
+\tableofcontents
+
+%\listoffigures
+
+% =============================================================================
+
+% cap 1: cinemática
+\include{cinematica}
+
+% cap 2: dinámica
+\include{dinamica}
+
+% cap 3: energía
+%\include{energia}
+
+
+
+%\paragraph{Ejemplo práctico.}
+
+% ---------------
+% ---------------
+%\clearpage
+
+%\printbibliography
+%\printbibheading
+
+% ---------------
+\clearpage
+
+\input{anexo}
+
+% ---------------
+%\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografía}
+\printbibliography
+\end{document}
+

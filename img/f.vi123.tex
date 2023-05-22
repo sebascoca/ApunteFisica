@@ -1,0 +1,43 @@
+\begin{plot}{2.}{f.vi123}
+  {Actividad 1.}
+  set multiplot layout 3,1
+  #unset border
+  unset key
+  set xtics autofreq 2
+  set mxtics 2
+  set ytics autofreq 3.0
+  set mytics 3
+  set grid
+  set tics front    #| equivalente a (*) pero en una línea
+  #1
+  set arrow 1 from graph 0, first 0 to graph 1, first 0 head front lw 3 # eje x
+  set arrow 2 from 0, graph .0 to 0, graph 1 head front lw 3		# eje y 
+  show arrow 1 #; set label "$t$(h)" at graph .95,.4
+  set xlabel "$t$(h)" offset  graph .46,.53
+  show arrow 2#; set label "$v$(km/h)" at graph 0.25,.98 
+  set ylabel "$x$(km)" offset graph .73,.45 rotate by 0
+  #
+  f(x) = .03*x**3 + .23*x**2 - 2*x - 5
+  set yzeroaxis lt -4 lc -4
+  set xrange [-10:10]; set yrange [-15:15]
+  #
+  plot  0 \
+  , f(x) lc 0 lw 4 \
+  #2
+    f(x) = -.025*x**3 - .23*x**2 + 2*x + 5
+  set yzeroaxis lt -4 lc -4
+  set xrange [-10:10]; set yrange [-15:15]
+  #
+  plot  0 \
+  , f(x) lc 0 lw 4 \
+  #3
+  f(x) = .01*x**4 - .4*x**2 - x - 5
+  set yzeroaxis lt -4 lc -4
+  set xrange [-10:10]; set yrange [-15:15]
+  #
+  plot  0 \
+  , f(x) lc 0 lw 4 \
+  #
+  unset multiplot
+\end{plot}
+

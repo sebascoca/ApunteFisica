@@ -1,0 +1,58 @@
+\begin{plot}{.9}{f.interv}
+  {Diagrama correspondiente a los distintos intervalos y su representación
+  gráfica. En color se indica el intervalo en cada caso y con
+  paréntesis/corchete como se representa.
+  }
+  unset tics
+  unset border
+  #set title 'caso (1)' font 'Helvetica,46'
+  set label 'intervalo:' at screen -.15, first 1.50 left
+  set label '$\cdot$ abierto' at screen -.1,first 1.43 left
+  set label '$\cdot$ semi-abierto/cerrado' at screen -.1,first 1.23 left
+  set label '$\cdot$ cerrado' at screen -.1,first 1.03 left
+  #
+  set arrow from -8.5,1.4 to 7,1.4 head lw 2 lc 0
+  set label '$x$' at 6.7,1.43
+  set label '$-4$' at -4.3,1.43 right
+  set label '2' at 2,1.43 left
+  set label  "$($" at -4,1.4 center
+  set label  "$)$" at 2,1.4 center
+  set arrow from -4,1.4 to 2,1.4 nohead lc 2 lw 9
+  #
+  set arrow from -8.5,1.2 to 7,1.2 head lw 2 lc 0
+  set label '$x$' at 6.7,1.23
+  set label '$-4$' at -4.3,1.23 right
+  set label '2' at 2,1.23 left
+  set label  "$($" at -4,1.2 center
+  set label  "$]$" at 2,1.2 center
+  set arrow from -4,1.2 to 2,1.2 nohead lc 3 lw 9
+  #
+  set arrow from -8.5,1.0 to 7,1.0 front head lw 2 lc 0
+  set label '$x$' at 6.7,1.03
+  set label '$-4$' at -4.3,1.03 right
+  set label '2' at 2,1.03 left
+  set label  "$[$" at -4,1.0 center
+  set label  "$]$" at 2,1.0 center
+  set arrow from -4,1 to 2,1 nohead lc 1 lw 9
+  set label '$a$'  at .5,1.03 center
+  set label '$b$'  at -6,1.03 center
+  #
+  #set arrow 1 from graph 0, first 0 to graph 1, first 0 head lw 2 # eje x
+  #set arrow 2 from 0, graph 0 to 0, graph 1 head lw 2	      # eje y 
+  #set arrow from -4,0 to 2,0 nohead lc 3 lw 7
+  #set arrow from -4,1 to -4,1.4 nohead lc 0 lt 0
+  #set arrow from 2,1 to 2,1.4 nohead lc 0 lt 0
+  #set arrow from graph 0,first 1.2 to -4,first 1.2 nohead lc 3 lw 7
+  #set arrow from 2,first 1 to graph 1,first 1 nohead lc 3 lw 7
+  set xrange [-9:7]; set yrange [.9:1.5]
+  plot \
+  "<echo '-4 1'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '-4 1.2'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '-4 1.4'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '2 1'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '2 1.2'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '2 1.4'" w p lc 0 pt 7 ps 1 t '' \
+  , "<echo '.5 1'" w p lc 0 pt 1 ps 3 t ''\
+  , "<echo '-6 1'" w p lc 0 pt 1 ps 3 t ''\
+\end{plot}
+

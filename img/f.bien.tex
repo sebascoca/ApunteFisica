@@ -1,0 +1,62 @@
+\begin{plot}{.9}{f.bien}
+  {Posible representación gráfica de la velocidad o posición en función del
+  tiempo sin los errores presentes en la Figura (\ref{f.mal}). Se puede utilizar
+  otra unidad según la necesidad.}
+  f(x) = 4
+  g(x) = 1.2*(x-3)+4
+  h(x) = -3*x**2 + 25*x - 43.6
+  i(x) = 5*x**2 + 4
+  j(x) = -5*(x-5) + g(5)
+  unset border
+  unset tics
+  #unset key
+  set xtics axis mirror
+  set ytics axis mirror
+  set format xy ""
+  # ejes
+  set arrow 1 from graph 0, first 0 to graph 1, first 0 head front lw 3 lc\
+  0 # eje x
+  set arrow 2 from 0, graph 0 to 0, graph 1 head front lw 3 lc 0\
+  # eje y 
+  show arrow 1 ; set label "$t$(h)" at graph .95,.35
+  show arrow 2; set label "$v$(km/h)" at graph 0.2,.98 
+  set label "o" at graph .25,.92
+  set label "$x$(km)" at graph .2,.86
+  # labels varios
+  set label '$a$' at -.7,i(-.5) 
+  set label '$b$' at 1.1,f(1.3)+.4
+  set label '$c$' at 2.8,f(3)+.4
+  set label '$d$' at 3.5,g(3.7)+.4
+  #set label '$e$' at 3.5,h(3.7)+.4
+  set label '$f$' at 4.8,g(4.7)-.2 
+  #set label '$g$' at 4.8,h(4.7)+.4 
+  set label '$i$' at 5.1,g(5)
+  # vertical
+  set arrow from -.5,0 to -.5,i(-.5) nohead front lc 0 lt 0 lw 2 
+  set arrow from 1.3,0 to 1.3,f(1.3) nohead front lc 0 lt 0 lw 2 
+  set arrow from 3,0 to 3,4 nohead front lc 0 lt 0 lw 2
+  set arrow from 3.7,0 to 3.7,g(3.7) nohead front  lt 0 lw 2 
+  set arrow from 4.7,0 to 4.7,g(4.7) nohead front lc 0 lt 0 lw 2 
+  set arrow from 5,0 to 5,j(5) nohead front lc 0 lt 0 lw 2
+  # horizontal
+  set arrow from -.5,i(-.5) to 0,i(-.5) nohead front lt 0 lw 2
+  set arrow from 0,g(3.7) to 3.7,g(3.7) nohead front lt 0 lw 2
+  #set arrow from 0,h(3.7) to 3.7,h(3.7) nohead front lt 0 lw 2
+  set arrow from 0,g(4.7) to 4.7,g(4.7) nohead front lt 0 lc 0 lw 2
+  #set arrow from 0,h(4.7) to 4.7,h(4.7) nohead front lt 0 lc 0 lw 2
+  set arrow from 0,j(5) to 5,j(5) nohead front lt 0 lw 2
+  # plot
+  set xrange [-1.2:7.2]; set yrange [-5:11]
+  plot 0 lc 0 t '' \
+  , [0:3] f(x) lc 2 t '' \
+  , [3:5] g(x) lc 2 t '' \
+  , [-1:0] i(x) lc 2 t ''\
+  , [5:6.5] j(x) lc 2 t ''\
+  , "<echo '-.5 5.25'" w p pt 7 lc 6 t ''\
+  , "<echo '1.3 4'" w p pt 7 lc 6 t '' \
+  , "<echo '3 4'" w p pt 7 lc 6 t ''\
+  , "<echo '3.7 4.84'" w p pt 7 lc 6 t ''\
+  , "<echo '4.7 6.04'" w p pt 7 lc 6 t ''\
+  , "<echo '5 6.4'" w p pt 7 lc 6 t ''\
+\end{plot}
+

@@ -1,0 +1,32 @@
+\begin{plot}{0.9}{f.ejemploep}
+  {Ecuación de movimiento del ejemplo. Se indica el dato dado en el problema.}
+  #unset border
+  unset key
+  set xtics autofreq 2
+  set mxtics 2
+  set ytics autofreq 30.0
+  set mytics 3
+  set grid
+  set tics front    #| equivalente a (*) pero en una línea
+  #set xtics axis mirror offset 1
+  #set ytics axis ("$60$" 0.5,"$-30$" -0.25) mirror offset 0,0.5
+  set arrow 1 from graph 0, first 0 to graph 1, first 0 head front lw 3 # eje x
+  set arrow 2 from 0, graph .0 to 0, graph 1 head front lw 3		# eje y 
+  show arrow 1 #; set label "$t$(h)" at graph .95,.4
+  set xlabel "$t$(h)" offset  graph .46,.39
+  show arrow 2#; set label "$v$(km/h)" at graph 0.25,.98 
+  set ylabel "$x$(km)" offset graph .33,.45 rotate by 0
+  set label "$(0.5h;50km)$" at 0.6,40
+  set arrow from 0.5,-60 to 0.5,50 nohead front lt 0 lw 2
+  set arrow from -2,50 to 0.5,50 nohead front lt 0 lw 2
+  #
+  set yzeroaxis lt -4 lc -4
+  set xrange [-2:6]; set yrange [-60:180]
+  #
+  plot  0 \
+  , [-1:2] 70*(x-.5) + 50 lc 0 lw 4 \
+  , [2:3] -80*(x-2) + 155 lc 0 lw 4 \
+  , [3:5] 50*(x-3) + 75 lc 0 lw 4 \
+  , "<echo '0.5 50'" w p ps 2 pt 7 lc 6 t '' \
+\end{plot}
+

@@ -1,0 +1,1107 @@
+
+% mru vídeo: https://www.educ.ar/recursos/40687/movimiento-rectilineo-uniforme-mru
+
+% secuencia didáctica con modellus+mru: https://www.educ.ar/recursos/14565/movimiento-rectilineo-uniforme-mru
+
+\chapter{Cinemática}
+
+\section{Partícula puntual y movimiento relativo}
+\label{c.pmr}
+
+La definición dada en el libro de partícula es: ``Un cuerpo es una
+\emph{partícula} cuando sus dimensiones son muy pequeñas en comparación con las
+demás dimensiones que participan en el fenómeno'' \parencite[62]{alvarenga}.
+%\parencites[c]{DK}[a][v]{DK}
+\\
+
+!!!dar la extensión de la definición para cuerpos "grandes"\\
+
+El \textit{concepto} del movimiento relativo planteado en
+\citeauthor{alvarenga} (\citeyear[62]{alvarenga}),
+deja en claro que la descripción del problema visto por un observador depende
+del punto de referencia en el cual se haya situado. Por este motivo es necesario
+introducir la noción de \emph{sistema de referencia}.
+
+\subsection{Sistema de referencia}
+\label{c.sr}
+
+Un sistema de referencia es un conjunto de convenciones usada por un observador
+para poder medir la posición y otras magnitudes físicas de un sistema físico y
+de mecánica. Las trayectorias medidas y el valor numérico de muchas magnitudes
+son relativas al sistema de referencia que se considere, por esa razón, se dice
+que el movimiento es relativo. Sin embargo, aunque los valores numéricos de las
+magnitudes pueden diferir de un sistema a otro, siempre están relacionados por
+relaciones matemáticas tales que permiten a un observador predecir los valores
+obtenidos por otro observador \parencite{w:sr}.
+
+De forma sintética y para el uso práctico, podemos definir a un sistema de
+referencia al que se corresponde con un punto físico de observación desde el
+cual se describe la posición y movimiento de los cuerpos, generalmente utilizando
+un \emph{sistema de coordenadas} espacial (sistema de coordenadas cartesianas -
+1D, 2D y 3D) y temporal.
+
+Los sistemas de referencia poseen características:
+\begin{itemize}
+  \item Independencia respecto al movimiento del cuerpo. Esto implica que la
+    descripción del problema físico no depende del sistema de referencia
+    (por ejemplo, soltar un piedra descripto por un observador al lado del que
+    suelta la piedra, ser el que suelta la piedra o estar arriba de un árbol no
+    cambia el proceso física: la piedra cae al suelo).
+  \item El tiempo, para todos los sistemas de referencia, es absoluto. Es decir,
+    para todos los observadores de un mismo fenómeno, el tiempo en que
+    transcurre es el mismo.\footnote{Esto es válido para la mecánica clásica,
+    que corresponde a lo estudiado en este curso.}
+  \item Las ecuaciones que rigen el movimiento de un cuerpo se cumplen
+    equivalentemente, cualquiera sea el sistema de referencia que se observe.
+    Es decir, que las ecuaciones utilizadas para describir el movimiento van a
+    ser las mismas independiente del sistema de referencia escogido.
+\end{itemize}
+
+Además, existen \textit{``libertades''} en la elección del sistema de referencia:
+\begin{itemize}
+  \item Libertad de elegir el origen temporal. Es decir desde cuando comienzo a
+    contar (largo el cronómetro).
+  \item Libertad en la elección de donde ubicar el origen del sistema de
+    coordenadas, normalmente utilizado para ubicar al observador.
+\end{itemize}
+Estas libertadas se ``restringen'' cuando en el problema se especifica que se tiene
+que describir desde tal lugar y/o contar desde tal otro.
+\\
+
+
+!!!hablar sobre la flecha en los gráficos, su significado y lo mínimo para
+comprender el s.c.
+
+\subsubsection{Temporal}
+\label{c.srt}
+
+Podemos definir/imaginar un sistema temporal como una recta numérica con un
+origen arbitrario, una dirección positiva y la opuesta negativa, además de la
+unidad para definir la escala y su unidad (por ej. 1\,h). 
+
+En la vida diaria se identifican muchos de estos sistemas de referencia
+temporales, por ejemplo el reloj que puede contar de 0 a 12\,h (o de 0 a 24\,h)
+y luego comenzar nuevamente. Podemos deducir que las $23\h$ de ayer corresponden
+a las $-1\h$ del día de hoy; y que las $30\h$ de hoy se corresponden con las
+$6\h$ de mañana (ambos ejemplos aplicados a relojes de $24\h$). Lo mismo es
+aplicable a los meses, los años, etc. Otro ejemplo muy claro y que se
+utiliza mucho es la designación AC y DC para indicar fechas antes de Cristo y
+después de Cristo, donde el nacimiento sería el origen del sistema.
+
+\subsubsection{Espacial}
+\label{c.sre}
+
+Los sistemas de referencia espaciales son básicamente sistemas de coordenadas
+cartesianos ortogonales en 1, 2 ó 3 dimensiones, según la necesidad. Dónde
+nuevamente será una o varias rectas numéricas perpendiculares entre sí, todas
+con un origen que puede o no coincidir (es a elección y necesidad de lo que se
+quiera describir) y una dirección positiva indicada por la flecha en el eje,
+junto con su partición y las unidades utilizadas (por ej. $1\km$, $5\m$, etc.).
+
+Nuevamente, en la vida diaria estamos constantemente utilizando éste tipo de
+sistema de referencia espaciales, por ejemplo las calles y alturas de la ciudad.
+Para el caso de Córdoba Capital se corresponde con un sistema de coordenadas
+cartesianas ortogonales cuyo origen está ubicado en la esquina de la Plaza San
+Martín y el Cabildo. Con el uso de los Sistemas de Posicionamiento Global (GPS),
+proporcionado por los teléfonos móviles al día de hoy, se naturaliza otro
+sistema utilizado a nivel mundial. Las coordenadas de este sistema poseen
+nombres: latitud y longitud, utilizadas para ubicar objetos y trayectorias
+en los distintos tipos de planos. Por ejemplo, la Ciudad de Córdoba posee las
+siguientes coordenadas geográficas: 
+\begin{align*}
+  (\phi = 31^{\circ}\, 25'\, 0''\, \mathrm{S}; &
+  \: \lambda = 64^{\circ}\, 11'\, 0''\, \mathrm{W}), \\
+  \mathrm{o} \\
+  (\phi = -31^{\circ}\, 25'\, 0'';&
+  \; \lambda = - 64^{\circ}\, 11'\, 0'').
+\end{align*}
+Donde en el primer conjunto de coordenadas se indica que es latitud Sur y
+longitud W (Oeste). Esto se puede obviar al poner el signo menos al comienzo de
+las coordenadas como se indica en el segundo par, sabiendo que para el Norte y
+Este se considera positivo.
+
+
+\section{Movimiento Rectilíneo Uniforme (MRU)}
+\label{c.mru}
+
+%!!!Se comprende MRU pero el problema surge con la velocidad negativa. Ejemplificar
+%y hacer notar que es simplemente una cuestión desde dónde y cuándo contar, dando
+%lugar a los sistemas de referencia.\\
+
+Un problema muy común se da, por ejemplo, cuando se quiere viajar a Bs. As. desde
+Cba. Se sabe que el viaje toma $7\h$ y que hay que recorrer unos $700\km$. Con
+esta información se puede calcular la velocidad del viaje, unos $100\kmh$. 
+De manera equivalente, sabemos que si se viaja a la misma velocidad pero durante
+$3\h$, se puede calcular que la distancia recorrida, $300\km$. Por último, si
+recorrimos $550\km$ a $100\kmh$, se puede saber que se viajó por $5.5\h$, es
+decir, por cinco horas y media. Estos son los problemas que se presentan al
+trabajar en \mru
+
+La relación matemática que define al \mru~ es \parencite[64]{alvarenga}:
+\begin{equation}
+  d = v \cdot t.
+  \label{e.d.alv}
+\end{equation}
+De la misma se pueden derivar relaciones para calcular la velocidad $v$ y el
+tiempo $t$:
+\begin{align}  
+  v = & \dfrac{d}{t}; \label{e.v.alv}\\ 
+  t = & \dfrac{d}{v}.  \label{e.t.alv}
+\end{align}
+Con las Ecuaciones (\ref{e.d.alv}), (\ref{e.v.alv}) y (\ref{e.t.alv}) es posible
+resolver prácticamente todos los problemas relacionados a \mru~ El problema
+surge cuando se introduce el concepto de velocidad negativa. La interpretación
+física de la velocidad negativa es que el cuerpo en lugar de ``avanzar'' está
+retrocediendo. Es decir, que se mueve en dirección hacia los valores negativos
+en un sistema de coordenadas (sistema de referencia). Pero según la Ecuación
+(\ref{e.v.alv}) si la velocidad es negativa, entonces $t$ o $d$ deben ser
+negativos, uno de ellos, ya que el cociente entre la distancia y el tiempo es la
+velocidad, la cual es negativa. Por definición, la distancia $d$ no puede ser
+negativa, por lo tanto el tiempo $t$ es negativo$\ldots$ ¿Pero tiene sentido que
+el tiempo sea negativo? Según lo visto en (\ref{c.srt}) el tiempo negativo tiene
+sentido físico, pero por ejemplo para un problema donde un auto demora $7\h$ en
+recorrer $700\km$ jamás dará como resultado una velocidad negativa. Esto se debe
+a que al calcular la velocidad, no se especificó ni el momento de salida ni de
+llegada, solo que el cuerpo demora cierto tiempo. Podemos decir que en la
+Ecuación (\ref{e.v.alv}) no se utiliza el tiempo absoluto, sino el intervalo de
+tiempo.
+
+\subsection{Intervalo de tiempo}
+\label{c.dt}
+
+Se define intervalo de tiempo $\Delta t$ a la duración de un evento definido
+entre dos tiempos específicos, final e inicial:
+\begin{equation}
+  \Delta t = t_f - t_i,
+  \label{e.dt}
+\end{equation}
+donde $t_f$ se corresponde al tiempo final cuando termina el viaje para nuestro
+caso y $t_i$ el tiempo de inicio del viaje. Esta magnitud nunca puede ser
+negativa ya que esto implicaría que se está volviendo en el tiempo. Esto está
+prohibido por los principios básicos de la mecánica clásica. 
+
+\paragraph{Ejemplo.} 
+Para nuestro caso en estudio, el viaje a Bs. As., se puede partir a las $7\h$ y
+llegar a las $14\h$, o de manera equivalente salir a las $12\h$ y llegar a las
+$19\h$. En ambos casos el intervalo de tiempo fue de $\Delta t = 7\h$.
+\finej \\
+
+Por lo tanto, en las Ecuaciones (\ref{e.d.alv}--\ref{e.t.alv}) la variable
+tiempo $t$ no tiene sentido, ya que se corresponde con el tiempo absoluto. La
+magnitud física que evalúa la duración de un suceso es el intervalo de tiempo
+$\Delta t$, y es éste el que se debe utilizar.
+
+
+\subsection{Desplazamiento o cambio de posición}
+\label{c.dx}
+
+\subsubsection{Desplazamiento positivo}
+
+Según lo visto en la sección (\ref{c.dt}) el intervalo de tiempo no es negativo
+por definición. Entonces, retomando las Ecuaciones
+(\ref{e.d.alv}--\ref{e.t.alv}) jamás podremos obtener una velocidad
+negativa$\ldots$ si es que seguimos conservando la distancia $d$.
+
+Si se utiliza $d$ tampoco vamos a poder ubicar a un objeto en un sistema de
+coordenadas con valor negativo, ya que la distancia evalúa la longitud del punto
+al origen o la longitud entre dos puntos. Para realizar una descripción correcta
+la distancia no es útil, en su lugar se puede utilizar la posición del cuerpo
+(sus coordenadas espaciales en un sistema de referencia) o el desplazamiento que
+realiza el cuerpo. La correcta es el desplazamiento $\Delta x$ y no la posición
+de un cuerpo $x$. 
+
+Se define desplazamiento o cambio de posición $\Delta x$ a la diferencia
+de posiciones que experimenta un cuerpo:
+\begin{equation}
+  \Delta x = x_f - x_i,
+  \label{e.dx}
+\end{equation}
+donde $x_f$ se corresponde a la posición que alcanza y $x_i$ a la posición
+inicial desde donde partió.
+
+Los siguientes ejemplos demuestran porque se debe usar $\Delta x$ y no $x$.
+
+
+\paragraph{Ejemplo.} 
+Volviendo al problema de viajar a Bs. As. desde Cba., recorriendo $700\km$ en
+$\Delta t =7\h$, queremos calcular la velocidad del auto. La misma da
+$v=\dfrac{700\km}{7\h}=100\kmh$. Ahora utilicemos un sistema de coordenadas con
+origen en Cba. ($x_i=0\km$) y positivo hacia Bs. As. ($x_f=700\km$). ¿Cuál de
+las dos coordenadas deberíamos utilizar? ¿Tiene sentido tener la posibilidad de
+elegir qué coordenada utilizar? No, lo que tiene sentido es que el
+desplazamiento realizado por el auto, que fue de $\Delta x= x_f - x_i =
+700\km - 0\km = 700\km$. \finej
+
+\paragraph{Ejemplo.} 
+Si ahora se utiliza un sistema de coordenadas con origen en La Cumbre, ubicada a
+$100\km$ de Cba. entonces tenemos que Cba. está en $x_i=100\km$ y Bs. As. en
+$x_f=800\km$. Si solo se utilizan coordenadas, seríamos incapaces de obtener la
+velocidad anterior. Pero el desplazamiento no cambio, sigue siendo de $\Delta x
+= x_f - x_i = 800\km - 100\km = 700\km$. Este desplazamiento es el mismo que
+utilizando el sistema de coordenadas con origen en Cba.
+\finej \\
+
+{\bf Se puede concluir que el desplazamiento que realiza un cuerpo es
+independiente del sistema de coordenadas utilizado.}
+
+\subsubsection{Desplazamiento negativo}
+
+Comencemos con un par de preguntas, ¿tiene sentido un desplazamiento negativo?
+¿Qué significa? En ningún momento se especificó que el desplazamiento debe ser
+positivo, por lo tanto podría ser negativo. Al analizar la Ecuación (\ref{e.dx})
+se observa que si el desplazamiento es negativo, significa que la posición
+inicial es mayor a la posición final, matemáticamente: $x_i>x_f$. Esto significa
+que el cuerpo se está dirigiendo en sentido decreciente en el sistema de
+coordenadas, disminuyendo su coordenada.
+
+\paragraph{Ejemplo.} Ahora se considera el caso que el auto vuelve a Cba. desde
+Bs. As. El sistema de coordenadas utilizado se corresponde a tomar el origen en
+Cba. y contar hacia Bs. As. Entonces, al considerara la ``vuelta'' cambian los
+valores de las coordenadas inicial y final. El auto parte de Bs. As.
+($x_i=700\km$) y llega a Cba. ($x_f=0\km$). El desplazamiento del auto en este
+caso es $\Delta x= 0\km - 700\km=-700\km$. Y por lo establecido en la sección
+anterior, al calcular la velocidad se utiliza el desplazamiento en lugar de la
+distancia, cuyo resultado es: $v=\dfrac{-700\km}{7\h}=-100\kmh$. ¡La velocidad
+es negativa! \finej \\
+
+Por lo tanto, podemos redefinir las Ecuaciones  (\ref{e.d.alv}--\ref{e.t.alv})
+con todas las consideraciones y análisis realizados:
+\begin{align}  
+  \Delta x = &\: v \cdot \Delta t; \label{e.mov} \\
+  \Delta t = & \: \dfrac{\Delta x}{v}.  \label{e.t}
+\end{align}
+Y por último la definición formal que se utilizará de ahora en adelante para la
+velocidad:
+\begin{equation}
+  \boxed{v \equiv \dfrac{\Delta x}{\Delta t} = \dfrac{x_f - x_i}{t_f - t_i}},
+  \label{e.v}
+\end{equation}
+que representa el cambio de posición que realiza un cuerpo en un determinado
+intervalo de tiempo.
+
+
+\subsection{Análisis de unidades}
+\label{c.anu}
+
+
+INCLUIR LO DEL SIMELA, UNIDADES FUNDAMENTALES Y ESPECIFICAR QUE POSICIÓN PUEDE
+SER EN º!!!!
+
+https://es.wikipedia.org/wiki/Sistema\_Internacional\_de\_Unidades
+
+Artículo en la wikipedia sobre el sistema internacional de unidades. Es un artículo muy completo, con muy buena información y referencias. Las secciones que les recomiendo leer principalmente son:
+
+    Unidades básicas
+    Unidades derivadas
+    Normas ortográficas relativas a los símbolos
+
+
+Al realizar el análisis de unidades de las distintas magnitudes físicas
+presentes: tiempo o intervalo de tiempo; distancia, posición o desplazamiento y
+velocidad se debe encerrar la variable entre corchetes y solo analizar las
+unidades que posea, sin importar el valor numérico: 
+
+\begin{align*}
+  [d] = &\: \m,\km,\ldots; \\
+  [x] = &\: \m,\km,\ldots; \\
+  [\Delta x] = &\: [x_f] - [x_i] = \m, \km, \ldots; \\
+  [t] = &\: \s, \h, \text{días},\mathrm{a\tilde{n}o},\ldots; \\
+  [\Delta t] =  &\: [t_f] - [t_i] = \s, \h, \text{días},\text{años},\ldots
+\end{align*}
+Para el caso de la velocidad que es una magnitud que se calcula en base a una
+relación, se realiza el análisis de manera equivalente:
+\begin{align*}
+  [v] = &\: \dfrac{[\Delta x]}{[\Delta t]} = \dfrac{\m,\km,\ldots}{\s,
+  \h,\ldots} = \ms, \kmh, \ldots 
+\end{align*}
+Solo se escribieron las unidades más utilizadas: $\ms$ o $\kmh$. Esto no implica
+que se puedan utilizar otras unidades para la velocidad, como por ejemplo:
+$\km/\mathrm{a\tilde{n}o}$.
+
+\paragraph{Ejemplo.}
+Un cuerpo recorre una distancia $d=60\m$, sus posiciones inicial y final son
+respectivamente $x_i=-30\m$ y $x_f=30\m$ y su desplazamiento de $\Delta x=60\m$.
+Análisis de unidades:
+%\begin{align*}
+$$
+  [d] =  \m; \qquad
+  [x_f] = [x_i] =  \m; \qquad
+  [\Delta x] = \m. 
+$$
+Como todas las variables del problema están en las mismas unidades no hay
+problema en trabajar directamente con sus magnitudes.
+\finej
+%\end{align*}
+
+\paragraph{Ejemplo.} 
+Un cuerpo posee una velocidad de $v=60\kmh$ y recorre $180\km$. Se quiere
+conocer el tiempo que le toma. Si se equivoca al despejar puede dudar de qué
+ecuación utilizar para calcular el intervalo de tiempo:
+$$
+\Delta t = \dfrac{v}{\Delta x}\qquad \text{o} \qquad \Delta t = \dfrac{\Delta
+x}{v}.
+$$
+Para resolver este problema basta con realizar un análisis de unidades a cada
+una de las expresiones. {\bf La relación correcta tiene que dar la misma unidad
+de ambos lados de la igualdad}. Se sabe que el resultado debe dar en h, la
+unidad de tiempo involucrada en el problema. Primera relación:
+\begin{align*}
+  [\Delta t] = &\: \left[\dfrac{v}{\Delta x}\right] \\
+  h = &\: \dfrac{[v]}{[\Delta x]} \\
+  h = &\: \dfrac{\kmh}{\km} = \kmh : \km \\
+  h = &\: \dfrac{\cancel{\km}}{\h} \cdot \dfrac{1}{\cancel{\km}} \\
+  \textbf{¿}\mathbf{h =} &\: \mathbf{\dfrac{1}{h}}\textbf{?} \qquad
+  \longleftarrow \qquad \text{¡No tiene sentido!}
+\end{align*}
+Por lo tanto la primera relación no es válida. Segunda relación:
+\begin{align*}
+  [\Delta t] = &\: \left[\dfrac{\Delta x}{v}\right] \\
+  h = &\: \dfrac{[\Delta x]}{[v]} \\
+  h = &\: \dfrac{\km}{\kmh} = \km : \kmh \\
+  h = &\: \dfrac{\cancel{\km}}{1} \cdot \dfrac{h}{\cancel{\km}} \\
+  \textbf{¡}\mathbf{h =} &\: \mathbf{h}\textbf{!}
+\end{align*}
+Por lo tanto ésta última expresión es la correcta para el cálculo del tiempo:
+$$
+\Delta t = \dfrac{\Delta x}{v} = \dfrac{180\km}{60\kmh} =
+\dfrac{180}{60}\dfrac{\km}{\kmh} = 3\h
+$$
+Respuesta: el auto demoró $3\h$ en recorrer los $180\km$ viajando a una
+velocidad de $60\kmh$. \finej \\
+
+{\bf Recordar siempre operar sobre las unidades al igual que con los valores
+numéricos.}
+
+%    ejercicios de sr temporal y espacial, mov. rel.
+
+\subsubsection*{Actividades (sistemas de referencia y unidades)}
+\small
+Resolver los siguientes ejercicios:
+
+% MEJORAR LA REDACCIÓN DE LOS ENUNCIADOS Y VERIFICAR SI TIENEN SENTIDO, POR EJ.
+% EL 3.
+% DAR EJEMPLOS PREVIOS PARA COMPRENDER QUE DEBEN REALIZAR
+
+\begin{enumerate}
+  \item Expresar el horario indicado según el sistema de referencia indicado,
+    cuyo sistema de referencia tiene origen a las 12h del día 29 de febrero (12h
+    -- 29/02).
+    \begin{tasks}(5)
+      \task 13h -- 29/02.
+      \task 13h -- 28/02.
+      \task 13h -- 01/03.
+      \task 24h -- 02/03.
+      \task 7h -- 29/02.
+    \end{tasks}
+
+  \item Expresar en el horario utilizado habitualmente los siguientes eventos
+    temporales sabiendo que el sistema de referencia utilizado posee su origen
+    23h -- 29/03.
+    \begin{tasks}(5)
+      \task $-23\h$.
+      \task $-50\h$.
+      \task 13h.
+      \task 24h.
+      \task 45h.
+    \end{tasks}
+
+  \item Calcular los intervalos de tiempo considerando como instante inicial el
+    origen del sistema indicado en el ejercicio 1. ¿Cómo se relacionan estos
+    intervalos con los resultados del ejercicio 1.?
+
+  \item Realizar una gráfico (recta) donde ubique todos los puntos del ejercicio
+    2. e indique gráficamente los intervalos de tiempo respecto al origen
+    utilizado en este ejercicio. ¿Qué conclusión puede obtener?
+
+  \item Dada la información de la siguiente figura, analizar y responder:
+    \begin{figure}[!ht]
+      \input{img/f.1}
+    \end{figure}
+  
+    \begin{enumerate}
+      \item Determinar las coordenadas de cada punto en el sistema de referencia
+	indicado en la figura.
+      \item Calcular el desplazamiento entre cada par consecutivo de puntos
+	iniciando de izquierda a derecha y luego de derecha a izquierda. ¿Qué
+	relación presentan entre ellos al calcularlos en ambos sentidos?
+      \item Tomar como origen de un nuevo sistema de referencia al punto B y
+	realizar lo mismo que en el punto anterior. Comparar los resultados de
+	ambos ejercicios.
+    \end{enumerate}
+
+  \item Incluir MRU con el gráfico planteando un "recorrido" y luego cambiando
+  el origen de la descripción!!!
+
+  \item Realizar el análisis de unidades para las siguientes relaciones y
+    verificar si son correctas.\footnote{No en el sentido de la física, sino en el
+    sentido que las unidades lo sean.} En caso negativo proponer una modificación para
+    que sea correcta:
+    \begin{tasks}(3)
+      \task $d = v^2\cdot t^2$
+      \task $v = \dfrac{(\Delta x)^2}{t}$
+      \task $t = \dfrac{x}{v}+t_i$
+      \task $x_f = v\cdot (t_f - t_i) + x_i$
+      \task $x = \dfrac{v}{\Delta t}+v$
+      \task $v = \dfrac{\Delta x}{\Delta t} + \Delta t$
+    \end{tasks}
+
+  \item Realizar nuevamente los siguientes ejercicios del libro, pero ahora
+    indicando el sistema de referencia utilizado, especificar el origen de
+    cada uno y utilizar las Ecuaciones (\ref{e.mov}--\ref{e.v}):
+    \begin{itemize}
+      \item Problemas 6, 7, 10 y 12, recordar realizar el cambio al
+	conjunto nuevo de variables ($d \to \Delta x$ y $t \to \Delta t$).
+      \item Realizar el gráfico conjunto de los problemas 8 y 9.
+      \item Realizar el análisis del ejercicio 11 con las nuevas ecuaciones.
+    \end{itemize}
+
+\end{enumerate}
+\normalsize
+
+% ---------------
+
+\subsection{Gráficos y Ecuaciones de movimiento}
+
+\subsubsection{Gráfico de la velocidad como función del tiempo}
+\label{c.vxt}
+
+Una de las condiciones para que un cuerpo se mueva en \mru, es que su velocidad
+se mantengan constante \textit{durante todo su movimiento}. Entonces, al
+realizar el gráfico de la velocidad como función del tiempo ($v \times t$, $v$
+vs $t$ o $v-t$), este se corresponde matemáticamente al gráfico de una función
+constante (Figura \ref{f.fcte}). 
+
+\input{img/f.fcte}
+
+La principal diferencia entre un gráfico matemático y uno físico, es que
+normalmente los físicos están acotados a un intervalo temporal y representa un
+hecho real. Por ejemplo un auto se desplaza a $60\kmh$ durante $3\h$. La Figura
+(\ref{f.v60}) represente la velocidad de este auto y solo está definida para el
+intervalo de tiempo comprendido entre $t=0\h$ y $t=3\h$.\footnote{Se evidencia
+la elección del origen del sistema de coordenadas temporal. El gráfico podría
+haber estado comprendido, por ejemplo, para el dominio temporal entre $t=-1\h$ y
+$t=2\h$, pero siempre y cuando se cumpla que $\Delta t = 3\h$.} Observar que el
+gráfico se corresponde con las características establecidas en el Apéndice
+(\ref{c.graf}) y no presenta errores como en las Figuras 3-5 y 3-6, con líneas
+continuas verticales que son incorrectas.
+%La representación correcta de la Figura 3-6
+%\parencite[65]{alvarenga} se encuentra en el Apéndice (\ref{c.graf}, p.
+%\pageref{f.a36}).
+
+\input{img/f.v60}
+
+Del análisis de este gráfico, no se puede decir nada sobre cómo se comportaba el
+auto antes de las $0\h$ y después de las $3\h$, no hay información. Solo sabemos
+que el auto se desplazó durante $3\h$ a $60\kmh$ y recorrió $180\km$. Este
+desplazamiento que realiza el auto se corresponde al área encerrada debajo de la
+función, en este caso constante. Los cálculos de la misma, al ser un rectángulo
+resultan:
+$$
+A = \mathrm{base}\times\mathrm{altura} = \Delta t \times v = (t_f - t_i)\times v
+= 3h\times 60\kmh = 180\km.
+$$
+
+\subsubsection{Ecuación de movimiento para la velocidad como función del tiempo}
+\label{c.evxt}
+
+Es posible expresar la información suministrada en la Figura (\ref{f.v60}) a
+través de una expresión matemática, una función. La Figura (\ref{f.fcte})
+corresponde a la representación gráfica y matemática para una función constante:
+$$
+f(x)=a,
+$$
+donde $a$ puede tomar cualquier valor real. La diferencia con física es que la
+función $f(x)$ es válida para todo el dominio, mientras que nuestro problema
+está acotado a comenzar entre las $0\h$ y $3\h$. Por lo tanto es necesario
+suministrar esta información en la ecuación. La forma correcta de realizar esto
+es a través del uso de los intervalos para acotar el dominio (ver Apéndice
+\ref{c.interv}). La variable que se quiere acotar es la variable independiente,
+el tiempo $t$. Además, en física se toma como intervalo cerrado todo el proceso,
+ya que se cuenta con información del comienzo y del final, por lo tanto resulta:
+$$
+t \in [0\h,3\h].
+$$
+Juntando la información del valor de la velocidad, la ecuación resultante es:
+\begin{equation*}
+  v(t) = 60\kmh,\quad t \in [0\h,3\h].
+\end{equation*}
+Esta ecuación se la conoce como la {\bf ecuación de movimiento para la velocidad
+como función del tiempo}. La misma indica la velocidad del cuerpo y el intervalo
+durante el cuál tuvo esa velocidad.
+
+\paragraph{ Por lo tanto se concluye que la información suministrada por la ecuación de
+movimiento para la velocidad como función del tiempo es equivalente a la
+presentada en el gráfico de velocidad como función del tiempo.}
+
+
+\paragraph{Ejemplo.} 
+Realizar una descripción de lo observado, dar el desplazamiento total y la
+ecuación de movimiento para la velocidad como función del tiempo para el
+siguiente gráfico correspondiente a un auto:
+\input{img/f.vss1}
+
+Interpretación de la información observada: el auto avanza durante $3\h$ a una
+velocidad de $v=60\kmh$, luego emprende la vuelta viajando durante $2\h$ y a una
+velocidad $v=-30\kmh$. En base a esta información es posible calcular los
+desplazamientos parciales en cada intervalo. Se utiliza la Ecuación
+(\ref{e.mov}), donde para el primer intervalo se tiene:
+$$
+t_i=0\h, \quad t_f=3\h, \quad v=60\kmh,
+$$
+con lo que resulta:
+$$
+\Delta x_1 = 60\kmh \cdot (3\h-0\h) =  180\km.
+$$
+Para el segundo intervalo se tiene:
+$$
+t_i=3\h, \quad t_f=5\h, \quad v=-30\kmh,
+$$
+entonces:
+$$
+\Delta x_2 = -30\kmh \cdot (5\h-3\h) =  -60\km.
+$$
+Por lo tanto, podemos expresar el desplazamiento total como la suma de los
+desplazamientos parciales, es decir:
+$$
+\Delta x = \Delta x_1 + \Delta x_2 = 180\km + (-60\km) = 120\km.
+$$
+
+Para la ecuación de movimiento, es necesario conocer la velocidad y el intervalo
+de validez de la misma, entonces para cada tramo se tiene:
+\begin{align*}
+  v(t) &= 60\kmh, \quad t \in [0\h,3\h] \\
+  v(t) &= -30\kmh, \quad t \in [3\h,5\h].\\
+\end{align*}
+Que se reescribir de la siguiente forma como una única ecuación:
+\[
+v(t) = \left\{ 
+\begin{array}{ll}
+  60\kmh, & t \in [0\h,3\h] \\
+  -30\kmh, & t \in [3\h,5\h] \\
+\end{array}
+\right.
+\]
+Con la ecuación de movimiento para la velocidad, se puede saber información de
+la velocidad que posee el auto en cierto instante. Por ejemplo, se puede
+responder: ¿qué velocidad posee a las 3 horas, 41 minutos y 18 segundos. Lo
+primero es ver a qué intervalo pertenece el tiempo deseado y vincular con la
+velocidad correspondiente. Ésta es la velocidad que posee el auto en ese
+instante. Para nuestra pregunta, vemos que: 
+$$
+3 \text{ horas, } 41 \text{ minutos y } 18 \text{ segundos} \in [3\h,5\h],
+$$
+por lo tanto la velocidad en ese instante es $v=-30\kmh$.
+
+Pero todavía hay problemas, ya que no es posible responder con certeza ¿cuál es
+la velocidad que posee a las $3\h$? Este instante en particular, según lo
+expresado en la ecuación de movimiento, pertenece a ambos
+intervalos.\footnote{Ambos intervalos son cerrados sus extremos, por lo tanto,
+$t=3\h$ pertenece a ambos intervalos según lo indicado en el Apéndice
+(\ref{c.interv}).} Es necesario notar que este problema surge por la suposición
+que el auto solo puede tomar valores constantes de velocidad y no variar de
+manera continua la velocidad. Entonces al cambiar la velocidad lo realiza de
+manera instantánea ``saltando'' de un valor a otro, es decir produciendo una
+discontinuidad en la función. Para solucionar este problema se utiliza la
+convención que el valor de la función, en nuestro caso velocidad, toma el valor
+del que viene en los tiempos previos. Por lo tanto, la velocidad es
+$v(3\h)=60\kmh$ y se lee: la velocidad del auto es de $60\kmh$ a las $3\h$.
+$v=60\kmh$.
+Por último, esta información también tiene que ser presentada en la ecuación de
+movimiento y en el gráfico. Según la convención, el punto de cambio de velocidad
+pertenece al intervalo de la izquierda, por lo tanto el intervalo de la derecha
+es abierto. Con este cambio la ecuación de movimiento para la velocidad como
+función de tiempo resulta:
+\[
+v(t) = \left\{ 
+\begin{array}{ll}
+  60\kmh, & t \in [0\h,3\h] \\
+  -30\kmh, & t \in (3\h,5\h] \\
+\end{array}
+\right.
+\]
+Y para el gráfico se indica con punto cerrado la pertenencia y punto abierto que
+no pertenece:
+
+\input{img/f.vss}
+\finej
+\paragraph{Tomar como regla para los intervalos que los mismos comienzan
+abiertos a izquierda y son cerrados a derecha, a excepción del primero que es
+cerrado a izquierda (los extremos pertenecen por ser el comienzo y fin del
+evento físico).\\}
+
+\subsubsection{Gráfico de la posición como función del tiempo}
+\label{c.xxt}
+
+Ver próxima sección.
+
+\subsubsection{Ecuación de movimiento para la posición como función del tiempo}
+\label{c.exxt}
+
+%!!! construcción, varias formas?
+
+En los siguientes links van a poder acceder a los vídeos de las clases
+preparadas para los temas desarrollados en las secciones (\ref{c.xxt}) y
+(\ref{c.exxt}):
+
+\begin{itemize}
+  \item Parte 1: \href{https://youtu.be/Hz0zQMLYsaM}
+  {https://youtu.be/Hz0zQMLYsaM}
+  \item Parte 2: \href{https://youtu.be/ADKcXhJsD-w}
+  {https://youtu.be/ADKcXhJsD-w} \\
+\end{itemize}
+
+%!!!interpretación de v
+\paragraph{Ejemplo.} 
+Para analizar un caso práctico, vamos a considerar que se conoce la ecuación de
+movimiento para la velocidad como función del tiempo:
+\[
+v(t)= \left\{ 
+\begin{array}{ll}
+  70\kmh, & t \in [-1\h,2\h] \\
+  -80\kmh, & t \in (2\h,3\h] \\
+  50\kmh, & t \in (3\h,5\h]\\
+\end{array}
+\right.
+\]
+y el dato que se conoce sobre su posición es que el cuerpo se ubica en $50\km$
+cuando $t=0.5\h$. Se quiere su ecuación de movimiento para la posición como
+función del tiempo y su gráfico correspondiente.\\
+
+Se desea construir su ecuación de movimiento para la posición como función del
+tiempo $x(t)$. Al igual que para la velocidad, $x(t)$ debe poseer tres términos
+correspondientes a los tres intervalos. Notar que el dato no se corresponde con
+el tiempo inicial ni el final del movimiento ni de ninguno de los tiempos en los
+cuales cambia la velocidad, sino que es un dato dentro del intervalo de tiempo
+en el cual el cuerpo desarrolla su movimiento. De manera genérica es posible
+escribir su ecuación de movimiento para la posición:
+\[
+x(t)= \left\{ 
+\begin{array}{ll}
+  v_1(t-t_{01}) + x_{01} \\
+  v_2(t-t_{02}) + x_{02} \\
+  v_3(t-t_{03}) + x_{03} \\
+\end{array}
+\right.
+\]
+donde los subíndices 1, 2 ó 3 hacen referencia a cada intervalo. De la ecuación
+de la velocidad se tienen datos de las mismas y cómo el dato se corresponde
+con un dato en el primer intervalo, es posible reescribir la ecuación anterior:
+\[
+x(t)= \left\{
+\begin{array}{ll}
+  70\kmh(t-0.5\h)+50\km, & t \in [-1\h,2\h] \\
+  -80\kmh(t-t_{02})+x_{02}, & t \in (2\h,3\h] \\
+  50\kmh(t-t_{03})+x_{03}, & t \in (3\h,5\h]\\
+\end{array}
+\right.
+\]
+Por lo tanto, el problema se reduce a encontrar los pares de puntos $(t_0,x_0)$
+correspondientes a cada intervalo. 
+
+Para el caso de los instantes de tiempo, se recomienda tomar el instante inicial
+de cada intervalo, que además se corresponde con los cambios de velocidad que
+posee el cuerpo. Esto da como resultado:
+\[
+t_{02} = 2\h \qquad \textrm{ y } \qquad t_{03}=3\h.
+\]
+
+Para obtener las posiciones correspondientes a los instantes recién obtenidos,
+es importante recordar que \textbf{la posición de un cuerpo siempre es continua}.
+Esto quiere decir que en los instantes en los cuales cambia de velocidad, la
+posición a la que llega el cuerpo con una velocidad es la misma posición de la
+que sale pero con otra velocidad. Físicamente, se plantea las siguientes
+ecuaciones, una por cada tiempo en el cual se da un cambio de la velocidad (dos
+en el problema):
+\[
+x_1(2\h) = x_2(2\h) \qquad \textrm{ y } \qquad
+x_2(3\h) = x_3(3\h),
+\]
+donde nuevamente el subíndice hace referencia a la ecuación en su
+correspondiente intervalo. Por lo tanto para el primer y segundo intervalo, que
+es para $t=2\h$, se tiene:
+\[
+70\kmh(\mathbf{2\h}-0.5\h)+50\km = -80\kmh(\mathbf{2\h}-2\h)+x_{02},
+\]
+Donde en negrita se remarcó la evaluación de la función de posición en el
+instante en que cambia la velocidad. De esta ecuación es posible despejar la
+posición $x_{02}$ correspondiente a $t=2\h$:
+\[
+x_{02} = 155\km.
+\]
+De manera equivalente se plantea para la intersección del segundo y tercer
+intervalo:
+\[
+-80\kmh(\mathbf{3\h}-2\h)+155\km = 50\kmh(\mathbf{3\h}-3\h)+x_{03},
+\]
+cuyo resultado da:
+\[
+x_{03} = 75\km.
+\]
+Con todos los datos obtenidos, es posible escribir la ecuación para la posición
+como función del tiempo y su gráfico:
+\[
+x(t)= \left\{
+\begin{array}{ll}
+  70\kmh(t-0.5\h)+50\km, & t \in [-1\h,2\h] \\
+  -80\kmh(t-2\h)+155\km, & t \in (2\h,3\h] \\
+  50\kmh(t-3\h)+75\km, & t \in (3\h,5\h]\\
+\end{array}
+\right.
+\]
+\input{img/f.ejemploep}
+Observar que la posición como función del tiempo se corresponde con el gráfico
+de una función que se puede realizar sin levantar la mano, es decir que es
+una función continua.
+\finej
+
+
+\subsubsection*{Actividades (gráficos y ecuaciones de movimiento)}
+\small
+Resolver los siguientes ejercicios:
+
+\begin{enumerate}
+  \item Realizar el gráfico de $v-t$ correcto y luego escribir la ecuación de
+    movimiento de la velocidad para las Figuras 3-5 y 3-6
+    \parencite[65]{alvarenga}.
+  \item Para la Figura 3-8 y la Figura del Ejercicio 12
+    \parencite[68]{alvarenga} realizar el cálculo de la velocidad, construir el
+    gráfico y escribir la ecuación de movimiento para la velocidad como función
+    del tiempo.
+  \item Realizar el gráfico para la siguiente ecuación de movimiento de la
+    velocidad como función del tiempo:
+    \[ v(t) = \left\{
+      \begin{array}{ll}
+	-30\kmh, & t \in [-2\h,1\h] \\
+	80\kmh, & t \in (1\h,4\h] \\
+	50\kmh, & t \in (4\h,6.5\h] \\
+	-20\kmh, & t \in (6.5\h,6.75\h] \\
+	70\kmh, & t \in (6.75\h,9\h] \\
+      \end{array}
+      \right.
+    \]
+    Calcular el desplazamiento total que realiza.
+    \item Construir el gráfico y la ecuación de movimiento de la posición como
+    función del tiempo correspondiente al punto 1. considerando como dato para
+    cada uno:
+    \begin{enumerate}
+      \item la posición del cuerpo es $0\km$ cuando el tiempo es $0\h$;
+      \item posición de $15\km$ en $0.5\h$.
+    \end{enumerate}
+  \item Escribir la ecuación de movimiento $x(t)$ para los puntos del ejercicio
+    2.
+  \item Construir la ecuación de movimiento $x(t)$ y el gráfico correspondiente
+    para el problema de la actividad 3., considerar los siguientes datos:
+    \begin{enumerate}
+      \item $(t_0;x_0)=(-2\h;-40\km)$;
+      \item $(t_0;x_0)=(0\h;40\km)$;
+      \item $(t_0;x_0)=(0\h;-40\km)$;
+    \end{enumerate}
+  \item Tomar $x(t)$ construida para el caso c) y responder:
+    \begin{enumerate}
+      \item Determinar la posición del cuerpo para los siguientes instantes:
+	$t=0\h, \quad t=-1.25\h$, $t=5.5\h \textrm{ y } t=8,\!\overline{3}\h$.
+	% casi como debería ser: 5,\!\stackrel\frown{5}$.
+      \item Determinar en qué instante de tiempo el cuerpo se encuentra en
+	$x=20\km$, $x=-70\km$ y en $x=450\km$. ¿Qué conclusiones puede obtener
+	de éste ejercicio?
+      \item Calcular el desplazamiento para el intervalo: $[2\h,7\h]$.
+      \item Determinar la velocidad que el cuerpo desarrolla durante el
+	intervalo especificado en el punto anterior.
+    \end{enumerate}
+
+\end{enumerate}
+\normalsize
+
+En el Anexo (\ref{c.geogebra}) van a encontrar la metodología para realizar
+gráficos de funciones de a tramos en GeoGebra y puedan verificar si los gráficos
+que realizaron están correctos.
+
+\subsection{Velocidad media, rapidez y velocidad instantánea}
+\label{c.vels}
+
+En los siguientes links van a poder acceder a los vídeos de las clases
+preparadas para los temas desarrollados en la sección (\ref{c.vels}):
+
+\begin{itemize}
+  \item Parte 1: Velocidad media, rapidez y velocidad instantánea (método
+    gráfico)\\
+    \href{https://youtu.be/z2VE5GNGZqQ}{https://youtu.be/z2VE5GNGZqQ}
+  \item Parte 2: Velocidad instantánea (método analítico)\\
+    \href{https://youtu.be/ae\_HijqGzMA}{https://youtu.be/ae\_HijqGzMA} \\
+\end{itemize}
+
+
+MENCIONAR QUE LA VELOCIDAD INSTANTÁNEA ES LA VELOCIDAD MEDIA CUANDO Dt=0, ESTO
+ES LO QUE SE CALCULA.
+
+\paragraph{Ejemplo práctico.}
+Una forma práctica de entender la diferencia entre la velocidad instantánea y la
+media y el proceso por el cual es posible calcular la velocidad instantánea a
+través de la velocidad media es al utilizar el poder de cómputo de las
+computadoras.
+
+Suponga que se quiere calcular la velocidad instantánea de un cuerpo con la
+siguiente ecuación de movimiento:
+\[
+x(t) = 5t^3 - 2t^2 +7t-19,
+\]
+en el instante $t=2.5\h$ ($[x]=\km$).
+
+Se construye una tabla y con la ayuda de una planilla de cálculo, se computa el
+valor de la velocidad media para distintos valores del intervalos de tiempos,
+cada vez más chicos. Cuando el intervalo de tiempo tienda a cero, $\Delta t\to
+0$, se obtiene la velocidad instantánea.
+
+En la siguiente tabla se presentan algunos casos:
+\begin{table}[!h]
+\centering
+\footnotesize
+\hspace*{-0.7cm}
+\begin{tabular}{ccc|cccc|l}
+\hline\hline
+ &&& 1º paso & 2º paso & 3º paso & 4º paso \\
+$t_i$ & $\Delta t$ & $t_f$ & $x_i$ & $x_f$ & $\Delta x$ & 
+$\overline{v}=\sfrac{\Delta x}{\Delta t}$ & 
+$\left|v(2.5\h) - \bar{v}\right|$ \\
+\hline
+$2.5$ & 1 & $3.5$ & $64.125$ & $195.375$ & $131.25$ & $131.25$ & $40.5$ \\
+$2.5$ & $0.5$ & 3 & $64.125$ & 119 & $54.875$ & $109.75$ & 19 \\
+$2.5$ & $0.125$ & $2.625$ & $64.125$ & $76.03320313$ & $11.90820313$ &
+$95.265625$ & $4.515625$ \\
+$2.5$ & $0.003960625$ & $2.50390625$ & $64.125$ & $64.48003417$ & 
+$0.3550341725$ & $90.88874817$ & $0.1387481689$ \\
+$2.5$ & $0.000244140625$ & $2.500244141$ & $64.125$ & $64.14715788$ & 
+$0.02215787776$ & $90.75866729$ & $0.008667290211$ \\
+\hline
+\end{tabular}
+\normalsize
+\caption{Ejemplo práctico del cómputo de la velocidad instantánea a través de la
+velocidad media; $[t]=\h$ y $[x]=\km$. Se indican los primeros 4 pasos para el
+cómputo de la velocidad instantánea y la diferencia con la velocidad
+instantánea ($v(2.5\h)=90.75\kmh$).}
+\label{t.velinst}
+\end{table}
+
+Se observa en la Tabla (\ref{t.velinst}) como la velocidad media se aproxima a
+la velocidad instantánea a medida que el intervalo de tiempo se reduce, esto se
+evidencia en el valor absoluto entre las diferencias de velocidades expuesto en
+la última columna. Se especifican los cuatro primeros pasos del cálculo de la
+velocidad instantánea para cada intervalo de tiempo. La posición inicial $x_i$
+no cambia su valor debido a que el instante inicial $t_i$ es siempre el mismo.
+
+La Figura (\ref{f.velinst}) presenta los resultados de la Tabla
+(\ref{t.velinst}) de manera gráfica. En negro corresponde a la función de
+posición $x(t)$, en verde, violeta y azul se presentan las rectas
+correspondientes a cuerpos con velocidades medias de $131.25\kmh$, $109.75\kmh$
+y $95.27\kmh$ respectivamente. Por último, la recta tangente en el punto es 
+roja.
+
+
+\input{img/f.velinst}
+
+En el siguiente 
+\href{https://drive.google.com/open?id=1bQr\_anDE0co2UJfpLdKI5xJT9iGHT3MXe3RD\_4yxqZQ}
+{archivo} acceden a una planilla de cálculo para verificar lo establecido
+en la Tabla (\ref{t.velinst}) y probar con otros valores de tiempo para calcular
+la velocidad instantánea (otro valor del instante inicial $t_i$), distintos
+intervalos de tiempos y formas de disminuir el mismo.
+
+\subsubsection*{Actividades (velocidades)}
+\small
+Resolver los siguientes ejercicios:
+\begin{enumerate}
+  \item Para los siguientes gráficos $x(t)$ calcular la velocidad según se
+    indique. En el caso de velocidades medias representarlas en el gráfico y
+    explicar que representan físicamente; para rapidez explicar que representa:
+    \begin{enumerate}
+      \item Velocidad media en $t\in [-6\h,6\h]$ y $t\in[-2\h,5\h]$; y velocidad
+	instantánea en: $-6\h$, $0\h$, $3\h$ y $5\h$.
+	\input{img/f.vi1}
+      \item Rapidez en $t\in[-6\h,2\h]$ y $t\in[4\h,8\h]$; y velocidad
+	instantánea en: $-4\h$, $0\h$ y $4\h$.
+	\input{img/f.vi2}
+      \item Velocidad media en $t\in[-4\h,5\h]$; rapidez en $t\in[-4\h,5\h]$; y
+	velocidad instantánea en: $-6\h$, $-1\h$, $5\h$ y $7\h$.
+	\input{img/f.vi3}
+    \end{enumerate}
+  \item Calcular la velocidad instantánea en $-2\h$, $-1\h$, $0\h$ y $3\h$ para
+    las siguientes ecuaciones de movimiento (donde $[x]=km$ y $[t]=h$):
+    \begin{enumerate}
+      \item $x(t)=30t+15$.
+      \item $x(t)=30t^2+15$.
+      \item $x(t)=-5t^2+10t-5$.
+    \end{enumerate}
+  \item Para las ecuaciones de movimiento del ítem anterior calcular la
+    velocidad media para los siguientes intervalos de tiempo: $[-2\h,-1\h]$,
+    $[-2\h,3\h]$ y $[-2\h,2\h]$. ¿Cuál de las tres velocidades medias se
+    aproxima más al valor de la velocidad instantánea en $t=-2\h$? Justificar.
+  \item Un auto se desplaza durante $3\h$ a $75\kmh$, luego se deteniene y al
+  cabo de media hora sigue su viaje. Cómo va demorado y tiene que llegar en
+  $2,5\h$ a su destino, decide ir más rápido para poder recorrer los $220\km$
+  restantes.
+  Responder:
+  \begin{enumerate}
+    \item Construir el gráfico $v-t$.
+    \item Escribir la ecuación de movimiento para $v(t)$. 
+    \item Realizar el gráfico $x-t$ al suponer que parte a las $7:30h$.
+    \item A continuación construir la ecuación de movimiento $x(t)$. 
+    \item Calcular la velocidad media de todo el viaje. ¿Cómo interpreta este
+    resultado?
+    \item Realice nuevamente la resolución del problema suponiendo que la
+    ubicación de la cual parte es $x_0=153\km$ en un sistema de referencia que
+    cuenta en sentido contrario a donde se dirige.
+    \end{enumerate}
+  \item Calcular la velocidad instantánea en $-1\s$, $-2\s$ y $1\s$ para las
+  siguientes ecuaciones de movimiento (donde $[x]=m$ y $[t]=s$):
+    \begin{enumerate}
+      \item $x(t)=3t^3-5t^2$
+      \item $x(t)=\dfrac{2}{3}t^3 -\dfrac{3}{2}t^2 +10t$
+      \item $x(t)=\dfrac{2}{t+3}$
+      \item $x(t)=\dfrac{5}{t^2} + 4t$
+    \end{enumerate}
+\end{enumerate}
+\normalsize
+
+
+% ---------------
+
+\section{Movimiento Rectilíneo Uniformemente Variado (MRUV)}
+
+% caida libre en vácio
+%https://www.youtube.com/watch?v=E43-CfukEgs
+
+\subsection{Caída Libre y Tiro Vertical}
+\label{c.cltv}
+
+En el siguiente link van a poder acceder al vídeo de la clase
+preparadas para el tema desarrollado en la sección (\ref{c.cltv}). Primero se
+recomienda estudiar el capítulo 3.5 (\citeauthor{alvarenga}). Tengan presente
+que el tratamiento del Tiro Vertical no se presenta de manera detalla en el
+libro:
+
+\begin{itemize}
+  \item Aplicación de MRUV: Caída Libre y Tiro Vertical. \\
+    \href{https://youtu.be/8vFQ6gut3Do}{https://youtu.be/8vFQ6gut3Do}
+\end{itemize}
+
+
+% ---------------
+
+\section{Movimientos en más de una dimensión}
+\label{c.2d}
+
+En el estudio del movimiento de los cuerpos, el paso siguiente es considerar que
+el movimiento es en más de una dimensión. Por ejemplo puede ser cuando se arroja
+una piedra o una jabalina, dar un pase en cualquier deporte, etc. En todos los
+casos es nuestro cerebro el encargado de resolver el problema y conseguir el
+objetivo deseado, hacer llegar el cuerpo a un punto específico, sin siquiera
+darnos cuenta. Para esto es necesario estimar la dirección, sentido y la
+magnitud de la velocidad, fuerza o aceleración que se le otorgue al cuerpo. Por
+lo tanto, ahora es necesario dar más información de las magnitudes físicas y
+representarlas por vectores. Por tal motivo primero se estudia la adición de
+vectores.
+
+AGREGAR EL TRATAMIENTO COMO COORDENADAS DE LOS VECTORES (AVERIGUAR NOMBRE)!!!
+
+\subsection{Adición de vectores}
+\label{c.sv}
+
+En el siguiente link van a poder acceder al vídeo de la clase
+preparadas para el tema desarrollado en la sección (\ref{c.sv}). Primero se
+recomienda estudiar los capítulos 4.1 y 4.2 (\citeauthor{alvarenga}):
+
+\begin{itemize}
+  \item Adición de vectores que no son ni paralelos ni perpendiculares entre sí
+  (métdos gráfico y analítico)\\
+    \href{https://youtu.be/FMqEXO3b8E4}{https://youtu.be/FMqEXO3b8E4}
+\end{itemize}
+
+%INCLUIR EJEMPLOS GRÁFICOS Y ANALÍTICOS!!!  <- hay en el vídeo
+
+
+\subsubsection*{Actividades (vectores)}
+\small
+\begin{enumerate}
+  \item Dados los siguientes vectores:\footnote{El ángulo especifica la dirección
+  y sentido del vector.} $\vec{A}=5\m$ con $\alpha=0\grm$,
+  $\vec{B}=13\m$ con $\beta=90\grm$, $\vec{C}=3\m$ con $\gamma=180\grm$,
+  $\vec{D}=5\m$ con $\delta=60\grm$ y $\vec{E}=7\m$ con $\epsilon=200\grm$,
+  realizar las siguientes adiciones con el método gráfico:
+    \begin{enumerate}
+    \item $\vec{A}+\vec{C}$
+    \item $\vec{D}+\vec{B}$
+    \item $\vec{A}+\vec{C}+\vec{E}$
+    \item $\vec{A}+\vec{C}+\vec{E}+\vec{B}+\vec{D}$
+    \item $3\vec{D}$
+    \item $\vec{A}+2\vec{C}$
+    \item $\vec{A}-\vec{C}$
+    \end{enumerate}
+  \item A continuación realizar la adición analítica con los mismos vectores del
+  ejercicio anterior:
+    \begin{enumerate}
+    \item $\vec{C}+\vec{A}$
+    \item $\vec{D}+\vec{C}$
+    \item $\vec{D}+\vec{C}+\vec{B}$
+    \item $\vec{B}+\vec{E}+\vec{D}$
+    \item $\vec{C}-\frac{1}{2}\vec{A}$
+    \end{enumerate}
+\end{enumerate}
+\normalsize
+
+\subsection{Composición de movimientos}
+\label{c.cm}
+
+A continuación está el link para acceder al vídeo de la clase
+preparadas para el tema desarrollado en la sección (\ref{c.cm}):
+
+\begin{itemize}
+  \item Composición de movimientos, aplicación a dos casos prácticos \\
+    \href{https://youtu.be/R1N\_fhKb4pY}{https://youtu.be/R1N\_fhKb4pY}
+\end{itemize}
+
+\subsubsection*{Actividades (composición de movimientos)}
+\small
+\begin{enumerate}
+  \item Calcular el tiempo de vuelo y el alcance que realiza un cuerpo que es
+  arrojado con $\vec{v}=72\kmh$, con una inclinación {\bf respecto de la
+  vertical} de:
+    \begin{enumerate}
+      \item $\alpha = 30\grm$
+      \item $\alpha = 40\grm$
+      \item $\alpha = 50\grm$
+      \item $\alpha = 60\grm$
+      \item $\alpha = 45\grm$
+    \end{enumerate}
+  \item Realizar un análisis de los datos obtenidos en el punto anterior y
+  determinar bajo qué condiciones se alcanza (justificar sus respuestas):
+    \begin{enumerate}
+      \item máxima distancia horizontal;
+      \item máxima altura vertical;
+      \item máximo tiempo de vuelo;
+      \item máximo tiempo de vuelo y altura vertical;
+      \item máximo tiempo de vuelo y distancia horizontal;
+      \item ¿Será posible cumplir que el cuerpo posea simultaneamente máxima
+      altura vertical y distancia horizontal?
+      \item Si se aplica este análisis a los deportes, por ejemplo lanzamiento
+      de bala o jabalina, ¿cuáles son las condiciones óptimas que se tienen que
+      cumplir para ganar la competencia?
+    \end{enumerate}
+  \item En el lanzamiento de disco un competidor obtiene los siguientes datos de
+  su lanzamiento:
+    \begin{itemize}
+      \item Alcance $76.80\m$ (record mundial femenino).
+      \item Tiempo de vuelo $3.78\s$.
+    \end{itemize}
+    Responder:
+    \begin{enumerate}
+    \item Determinar el vector velocidad que el deportista le otorga al disco.
+    \item ¿Puede alcanzar los mismos resultados con otro vector velocidad?
+    Justificar.
+    \item Si el tiempo de vuelo no es un dato exacto, sino que es un intervalo
+    de tiempo centrado en el valor expuesto, ¿qué sucede en este caso con el
+    vector velocidad? Realizar el análisis.
+    \end{enumerate}
+\end{enumerate}
+\normalsize
+
+
