@@ -1,3 +1,25 @@
+# My stuff
+
+# vim
+*.swp
+
+# only pdf upload
+*.ps
+*.eps
+
+# dirs
+old/
+gnuplottex/
+varios/
+
+# varios
+*.dat
+*.error
+*.rubber
+*.gnuploterrors
+img/tapa.pdf
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -300,12 +322,3 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-# My stuff
-
-# vim
-*.swp
-
-# dirs
-old/
-gnuplottex/
-varios/
